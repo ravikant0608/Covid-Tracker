@@ -2,35 +2,35 @@
 
 <html xmlns:th="http://www.thymeleaf.org">
 
-  <head>
-    <title>CoronaVirus Tracker Application</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" media="all" 
-          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
-  </head>
+<head>
+<title>CoronaVirus Tracker Application</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+</head>
 
-  <body>
-  
-    
+<body>
 
 
-<table>
 
- <tr>
- <th>State</th>
- <th>Country</th>
- <th>Population</th>
- </tr>
 
-  <tr th:each="locationstat: ${locationstats}">
-      <td th:text="${locationstat.state}"> </td>
-      <td th:text="${locationstat.country}"> </td>
-<!--       <td th:text="${locationstat.population}"> </td> -->
-   </tr>
-   
-</table>
+	<table>
 
-  
-  </body>
+		<tr>
+			<th>State</th>
+			<th>Country</th>
+			<th>Population</th>
+		</tr>
+
+		<tr th:each="locationstat: ${locationstats}">
+			<td th:text="${locationstat.state}"></td>
+			<td th:text="${locationstat.country}"></td>
+			<!--       <td th:text="${locationstat.population}"> </td> -->
+		</tr>
+
+	</table>
+
+
+</body>
 
 </html>
